@@ -1,6 +1,6 @@
 # Оголошуємо функцію total_salary, яка приймає як рядок один аргумент - шлях до текстового файлу   
 def total_salary (path: str="salaries.txt"):
-    # блок для перевірки можливих помилок. Якщо файл не знайдений - перехід до блоку except FileNotFoundError
+    # блок для перевірки можливих помилок. Якщо файл не знайдений - перехід до блоку "except FileNotFoundError"
     try:
         # Відкриваємо файл для читання з кодиванням UTF-8
         with open(path, "r",encoding="utf-8") as file:
@@ -25,7 +25,7 @@ def total_salary (path: str="salaries.txt"):
         total=sum(salaries)
         # Розрахуємо середне значення шляхом ділення загальної суми заробітних плат на кількість елементів
         average=total/len(salaries)
-        # Поветаємо результат
+        # Повертаємо результат
         return total, average
     #except спрацює, якщо не знайден файл salaries.txt (рядки 4-6) та видає повідомлення про це
     except FileNotFoundError:
